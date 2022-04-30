@@ -22,6 +22,8 @@ class WikipediaLinkCrawler:
         self.cache_file = cache_file
         if cache_file:
             self._read_cache(Path(cache_file))
+        else:
+            self.cache = {}
 
     def close(self) -> None:
         if self.cache_file:
