@@ -35,7 +35,7 @@ This script provides the `go_to_philosophy` function that returns a list of arti
 
 >>> path = go_to_philosophy("Foobar")
 >>> print(path)
-['Foobar', 'Metasyntactic_variable', 'Placeholder_name', 'Free_variables_and_bound_variables', 'Mathematics', 'Epistemology', 'Ancient_Greek_language', 'Greek_language', 'Indo-European_languages', 'Language_family', 'Language', 'Communication', 'Self', 'Consciousness', 'Sentience', 'Emotion', 'Mental_state', 
+['Foobar', 'Metasyntactic_variable', 'Placeholder_name', 'Free_variables_and_bound_variables', 'Mathematics', 'Epistemology', 'Ancient_Greek_language', 'Greek_language', 'Indo-European_languages', 'Language_family', 'Language', 'Communication', 'Self', 'Consciousness', 'Sentience', 'Emotion', 'Mental_state',
 'Mind', 'Phenomenon', 'Philosophy']
 ```
 
@@ -80,9 +80,9 @@ It returns the first path to Philosophy it finds. It also crawls faster due to t
 The `PhilosophyCrawler` class inherits from the more general `PathToCrawler` and `WikipediaLinkCrawler` classes.
 Read the source for more details.
 
-## TODO
+## Visualization
 
-- [ ] I've been recently learning about graph databases like Neo4j. Maybe we can do a nice visualization of Wikipedia links like [Six Degrees of Wikipedia](https://www.sixdegreesofwikipedia.com)?
+See [neo4j_demo](neo4j_demo) for an example of using the Neo4j graph database to store links bewteen articles and visualize them.
 
 ## References
 
