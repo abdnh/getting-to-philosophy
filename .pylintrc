@@ -1,0 +1,21 @@
+[MASTER]
+ignore=forms
+extension-pkg-whitelist=PyQt6,PyQt5
+
+[REPORTS]
+output-format=colorized
+
+[MESSAGES CONTROL]
+disable=
+  redefined-outer-name,
+  too-many-arguments,
+  no-else-return,
+  no-else-break,
+  bare-except,
+;   missing-function-docstring,
+;   missing-module-docstring,
+;   missing-class-docstring,
+
+[BASIC]
+good-names =
+  c,
