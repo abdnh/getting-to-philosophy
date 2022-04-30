@@ -31,29 +31,35 @@ There are two separate implementations of this process in this repo:
 This script provides the `go_to_philosophy` function that returns a list of articles starting from a given title to Philosophy (if there is any path leading there):
 
 ```python
-from web_crawler import go_to_philosophy
+>>> from web_crawler import go_to_philosophy
 
-path = go_to_philosophy("Foobar")
-print(path)
+>>> path = go_to_philosophy("Foobar")
+>>> print(path)
+['Foobar', 'Metasyntactic_variable', 'Placeholder_name', 'Free_variables_and_bound_variables', 'Mathematics', 'Epistemology', 'Ancient_Greek_language', 'Greek_language', 'Indo-European_languages', 'Language_family', 'Language', 'Communication', 'Self', 'Consciousness', 'Sentience', 'Emotion', 'Mental_state', 
+'Mind', 'Phenomenon', 'Philosophy']
 ```
 
 The function accepts an optional `limit` argument to limit the recursion level before giving up.
 The default is 1000.
 
 ```python
-import sys
-from web_crawler import go_to_philosophy
+>>> import sys
+>>> from web_crawler import go_to_philosophy
 
 # go as far as we can in pursuit of philosophy!
-path = go_to_philosophy("Foobar", limit=sys.maxsize)
+>>> path = go_to_philosophy("Kasiski examination", limit=sys.maxsize)
+>>> print(path)
+['Kasiski examination', 'Cryptanalysis', 'Information_system', 'Sociotechnical', 'Organizational_development', 'Organizational_change', 'Human_behavior', 'Human', 'Species', 'Biology', 'Science', 'Scientific_method', 'Empirical_evidence', 'Proposition', 'Logic', 'Reason', 'Consciousness', 'Sentience', 'Emotion', 'Mental_state', 'Mind', 'Phenomenon', 'Philosophy']
 ```
 
 There is also a more general `go_to` function that takes an additional argument for a destination different from Philosophy.
 
 ```python
-from web_crawler import go_to
+>>> from web_crawler import go_to
 
-path = go_to("Foobar", "Mathematics")
+>>> path = go_to("Foobar", "Mathematics")
+>>> print(path)
+['Foobar', 'Metasyntactic_variable', 'Placeholder_name', 'Free_variables_and_bound_variables', 'Mathematics']
 ```
 
 The scraped pages are cached in the `pages` directory.
@@ -64,10 +70,11 @@ This script implements a variant of the problem that follows all article links a
 It returns the first path to Philosophy it finds. It also crawls faster due to the use of the API.
 
 ```python
-from api_crawler import PhilosophyCrawler
-philosophy_crawler = PhilosophyCrawler()
-path = philosophy_crawler.path_to_philosophy("C (programming language)")
-print(path)
+>>> from api_crawler import PhilosophyCrawler
+>>> philosophy_crawler = PhilosophyCrawler()
+>>> path = philosophy_crawler.path_to_philosophy("C (programming language)")
+>>> print(path)
+['C (programming language)', '"Hello, World!" program', '.deb', 'Deb (file format)', '.NET Framework', '.NET', '.NET Bio', '.NET Foundation', '.NET Compact Framework', 'A Sharp (.NET)', 'Software design', 'Agency (philosophy)', 'Philosophy']
 ```
 
 The `PhilosophyCrawler` class inherits from the more general `PathToCrawler` and `WikipediaLinkCrawler` classes.
