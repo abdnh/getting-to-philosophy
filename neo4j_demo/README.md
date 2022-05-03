@@ -15,7 +15,7 @@ After running the script, you can run queries on Neo4j Desktop and visualize the
 For example, a [Cypher](<https://en.wikipedia.org/wiki/Cypher_(query_language)>) query to show all articles linking "Foobar"
 to "Philosophy" can be written as follows:
 
-```
+```sql
 MATCH p = (a)-[*]->(c)
 WHERE a.title = 'Foobar' AND c.title = 'Philosophy'
 RETURN *
