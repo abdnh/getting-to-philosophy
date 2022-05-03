@@ -22,8 +22,8 @@ class WikipediaLinksGraph:
         path = go_to(origin_title, target_title)
         for i, link in enumerate(path[:-1]):
             self.run_query(
-                "MERGE (a1:ARTICLE {title: $title1})"
-                "MERGE (a2:ARTICLE {title: $title2})"
+                "MERGE (a1:Article {title: $title1})"
+                "MERGE (a2:Article {title: $title2})"
                 "MERGE (a1)-[l:LINKS_TO]-(a2);",
                 title1=link,
                 title2=path[i + 1],
