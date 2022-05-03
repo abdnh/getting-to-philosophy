@@ -1,5 +1,8 @@
-This is a demo of using [web_crawler.py](../web_crawler.py) to find links between articles and store
-them in a [Neo4j](https://neo4j.com/) database.
+This folder contains the following:
+
+1. A demo of using [web_crawler.py](../web_crawler.py) to find links between articles and store
+   them in a [Neo4j](https://neo4j.com/) database.
+2. A simple Web page that pulls the stored data and visualize it using [neovis.js](https://github.com/neo4j-contrib/neovis.js/).
 
 [demo.py](demo.py) shows an example like this:
 
@@ -22,3 +25,8 @@ RETURN *
 ```
 
 ![Visualization of links between two Wikipedia articles](graph.png)
+
+You can also visualize the result by running a local server on this folder (using `python -m http.server` for example)
+and navigating to http://localhost:8000/.
+
+![Visualization of Wikipedia links using the neovis.js library](graph2.png)

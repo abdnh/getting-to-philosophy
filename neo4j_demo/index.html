@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <script src="https://cdn.neo4jlabs.com/neovis.js/v1.5.0/neovis.js"></script>
+    <title>Getting to Philosophy - Neo4j Demo</title>
+    <style>
+        #viz {
+            width: 900px;
+            height: 600px;
+            border: 1px solid lightgray;
+            font: 22pt arial;
+        }
+
+        #form {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" id="origin">
+        <input type="text" id="target">
+        <input type="submit" id="go" value="Go!">
+    </form>
+    <div id="viz"></div>
+    <script src="demo.js"></script>
+</body>
+
+</html>
