@@ -1,14 +1,13 @@
 import itertools
-from pathlib import Path
 import re
 import sys
+from pathlib import Path
 from typing import List, Set
 from urllib.parse import urlparse
 
-
-from bs4 import BeautifulSoup
-from bs4.element import Tag, NavigableString
 import requests
+from bs4 import BeautifulSoup
+from bs4.element import NavigableString, Tag
 
 import common
 

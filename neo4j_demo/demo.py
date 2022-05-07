@@ -1,4 +1,5 @@
 from typing import Any
+
 from neo4j import GraphDatabase
 
 from web_crawler import go_to

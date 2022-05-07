@@ -1,6 +1,6 @@
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
 from typing import Dict, List, Optional, Set
 
 import requests
@@ -23,7 +23,7 @@ class WikipediaLinkCrawler:
         if cache_file:
             self._read_cache(Path(cache_file))
         else:
-            self.cache = {}
+            self.cache: Dict[str, List[str]] = {}
 
     def close(self) -> None:
         if self.cache_file:

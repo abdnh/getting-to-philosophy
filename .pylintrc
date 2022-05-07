@@ -1,6 +1,4 @@
 [MASTER]
-ignore=forms
-extension-pkg-whitelist=PyQt6,PyQt5
 
 [REPORTS]
 output-format=colorized
